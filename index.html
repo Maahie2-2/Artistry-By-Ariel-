@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistry By Ariel Photography | Portraits & Event Photography | St. Louis & Grover, MO</title>
+    <meta name="description"
+        content="Passionate photographer based in St. Louis and the Grover area, MO, specializing in family moments, portraits, events, and worldwide travel photography.">
+
+    <!-- Luxury Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cormorant+Infant:ital,wght@0,300;0,400;1,300&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-black: #0a0a0a;
+            --color-white: #ffffff;
+            --color-gray-50: #fafafa;
+            --color-gray-100: #f5f5f5;
+            --color-gray-200: #e5e5e5;
+            --color-gray-400: #a3a3a3;
+            --color-gray-600: #525252;
+            --color-gray-800: #262626;
+            --color-gray-900: #171717;
+
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-script: 'Great Vibes', cursive;
+            --font-alt: 'Cormorant Infant', serif;
+
+            --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            background: var(--color-white);
+            color: var(--color-black);
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-gray-400);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-gray-600);
+        }
+
+        /* ===== NAVIGATION (MOBILE‑FIRST) ===== */
+        nav {
+            position: relative;
+            z-index: 50;
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+            transition: all 0.6s var(--transition-luxury);
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-black);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-link {
+            font-family: var(--font-alt);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-black);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--color-black);
+            transition: width 0.4s var(--transition-luxury);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile specific Toggle Button */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-black);
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 1.5rem;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s var(--transition-luxury);
+                z-index: 90;
+                gap: 2rem;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.25rem;
+                letter-spacing: 0.3em;
+            }
+        }
+
+        /* Hero Mobile Fix */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll !important;
+            }
+        }
+
+        /* Desktop Layout (Standard Horizontal) */
+        @media (min-width: 769px) {
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 4rem;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Optional premium parallax-like effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100px 100px;
+            pointer-events: none;
+        }
+
+        .hero-corner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-corner.top-left {
+            top: 60px;
+            left: 30px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .hero-corner.top-right {
+            top: 60px;
+            right: 30px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .hero-corner.bottom-left {
+            bottom: 60px;
+            left: 30px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .hero-corner.bottom-right {
+            bottom: 60px;
+            right: 30px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--color-white);
+            z-index: 10;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--transition-luxury) 0.2s forwards;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 9vw, 6rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1.2s var(--transition-luxury) 0.4s forwards;
+        }
+
+        .hero-script {
+            font-family: var(--font-script);
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--transition-luxury) 0.6s forwards;
+        }
+
+        .hero-description {
+            font-family: var(--font-alt);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s var(--transition-luxury) 0.8s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 1s var(--transition-luxury) 1s forwards;
+        }
+
+        .btn {
+            font-family: var(--font-alt);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            transition: all 0.4s var(--transition-luxury);
+            position: relative;
+        }
+
+        .btn-primary {
+            background: var(--color-white);
+            color: var(--color-black);
+            border: 1px solid var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--color-white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-white);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-white);
+            color: var(--color-black);
+            border-color: var(--color-white);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            opacity: 0;
+            animation: fadeIn 1s var(--transition-luxury) 1.5s forwards;
+        }
+
+        .scroll-text {
+            font-family: var(--font-alt);
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+            animation: scrollPulse 2s infinite;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        section {
+            padding: 6rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-eyebrow {
+            font-family: var(--font-alt);
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-gray-400);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-alt);
+            font-size: 1rem;
+            color: var(--color-gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ===== PORTFOLIO (12 IMAGES — MOBILE FIRST) ===== */
+        .works-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* Mobile: 1 column */
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .works-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            /* Tablet */
+        }
+
+        @media (min-width: 1024px) {
+            .works-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            /* Desktop */
+        }
+
+        .work-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .work-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            /* Slightly shorter images */
+        }
+
+        .work-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--transition-luxury);
+        }
+
+        .work-item:hover .work-image {
+            transform: scale(1.03);
+        }
+
+        .work-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.6s var(--transition-luxury);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .work-item:hover .work-overlay {
+            opacity: 1;
+        }
+
+        .work-category {
+            font-family: var(--font-alt);
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.3rem;
+            transform: translateY(20px);
+            transition: transform 0.5s var(--transition-luxury) 0.1s;
+        }
+
+        .work-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 300;
+            letter-spacing: 0.03em;
+            color: var(--color-white);
+            transform: translateY(20px);
+            transition: transform 0.5s var(--transition-luxury) 0.15s;
+        }
+
+        .work-item:hover .work-category,
+        .work-item:hover .work-title {
+            transform: translateY(0);
+        }
+
+        .work-border {
+            position: absolute;
+            inset: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transition: opacity 0.6s var(--transition-luxury);
+        }
+
+        .work-item:hover .work-border {
+            opacity: 1;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-section {
+            background: var(--color-gray-50);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-image-frame {
+            position: absolute;
+            inset: -15px;
+            border: 1px solid var(--color-gray-200);
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .about-image-wrapper {
+                padding: 15px;
+            }
+
+            .about-image-frame {
+                inset: 0;
+            }
+        }
+
+        .about-content {
+            padding: 0;
+        }
+
+        .about-eyebrow {
+            font-family: var(--font-script);
+            font-size: 1.8rem;
+            color: var(--color-gray-400);
+            margin-bottom: 1rem;
+        }
+
+        .about-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            font-family: var(--font-alt);
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--color-gray-600);
+            margin-bottom: 1.2rem;
+        }
+
+        .about-signature {
+            font-family: var(--font-script);
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            background: var(--color-white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 1rem;
+            transition: all 0.5s var(--transition-luxury);
+        }
+
+        .service-image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s var(--transition-luxury);
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .service-description {
+            font-family: var(--font-alt);
+            font-size: 0.95rem;
+            color: var(--color-gray-600);
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .service-border {
+            width: 40px;
+            height: 1px;
+            background: var(--color-gray-200);
+            margin: 1.5rem auto;
+            transition: width 0.4s var(--transition-luxury);
+        }
+
+        .service-card:hover .service-border {
+            width: 80px;
+            background: var(--color-black);
+        }
+
+        /* ===== REVIEWS SECTION ===== */
+        .reviews-section {
+            background: var(--color-gray-900);
+            color: var(--color-white);
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-quote-icon {
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .review-text {
+            font-family: var(--font-serif);
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            line-height: 1.6;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .review-author {
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--color-gray-400);
+        }
+
+        .review-recommends {
+            font-family: var(--font-alt);
+            font-size: 0.7rem;
+            color: var(--color-gray-600);
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        /* ===== CTA / BOOKING FORM ===== */
+        .cta-section {
+            background: #ffffff;
+            color: #000000;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: -30%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 1.5rem;
+            color: #000000;
+        }
+
+        /* ===== BOOKING FORM ===== */
+        .booking-form {
+            background: #fdfdfd;
+            padding: 2.5rem;
+            border: 1px solid #eeeeee;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-alt);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            background: #f8f8f8;
+            border: 1px solid #e5e5e5;
+            border-radius: 0;
+            font-family: var(--font-alt);
+            font-size: 0.95rem;
+            color: #000000;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        textarea.form-input {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Submit button uses existing .btn-primary */
+        .booking-form .btn-primary {
+            width: 100%;
+            max-width: 250px;
+            margin: 1.5rem auto 0;
+            background: #000000;
+            color: #ffffff;
+            border-color: #000000;
+        }
+
+        .booking-form .btn-primary:hover {
+            background: #222222;
+            color: #ffffff;
+            border-color: #222222;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--color-gray-900);
+            color: var(--color-white);
+            padding: 4rem 1.5rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-text {
+            font-family: var(--font-alt);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--color-gray-400);
+        }
+
+        .footer-title {
+            font-family: var(--font-alt);
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--color-gray-400);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.9rem;
+        }
+
+        .footer-links a {
+            font-family: var(--font-alt);
+            font-size: 0.9rem;
+            color: var(--color-gray-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--color-gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-400);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--color-white);
+            border-color: var(--color-white);
+            color: var(--color-black);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-gray-800);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--color-gray-600);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(0.5);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s var(--transition-luxury);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Artistry By Ariel Photography</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+                <i class="ri-menu-line"></i>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-corner top-left"></div>
+        <div class="hero-corner top-right"></div>
+        <div class="hero-corner bottom-left"></div>
+        <div class="hero-corner bottom-right"></div>
+
+        <div class="hero-content">
+            <span class="hero-eyebrow">Portraits & Event Photography</span>
+
+            <span class="hero-script">St. Louis • Grover • Worldwide</span>
+            <p class="hero-description">
+                Specializing in family moments, portraits, and special events — where genuine emotion meets timeless
+                artistry.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-outline">Book a Session</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="about-eyebrow">Meet The Artist</span>
+                    <h2 class="about-title">Hi, I'm Ariel</h2>
+                    <p class="about-text">
+                        I'm a passionate photographer based in the St. Louis (STL) and Grover area, Missouri. I'm also
+                        frequently associated with Cape Girardeau, MO, and I love to travel—whether it's across the
+                        state
+                        or anywhere in the world—to capture your most precious moments.
+                    </p>
+                    <p class="about-text">
+                        Every memory deserves to be captured with warmth and authenticity. Whether it's a milestone, a
+                        family gathering, or a once-in-a-lifetime event, I love freezing those genuine smiles, hugs, and
+                        little details that you'll treasure forever.
+                    </p>
+                    <p class="about-text">
+                        I can't wait to capture your memories and turn them into timeless stories you'll love looking
+                        back on.
+                    </p>
+                    <div class="about-signature">Ariel</div>
+                </div>
+                <div class="about-image-wrapper reveal">
+                    <img src="images/artist.jpg" alt="Angelina Photographer" class="about-image">
+                    <div class="about-image-frame"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Services</span>
+                <h2 class="section-title">What I Offer</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Weddings -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service1.jpg" alt="Weddings" class="service-image">
+                    </div>
+                    <h3 class="service-title">Weddings</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Capturing the intimate whispers, the grand celebrations, and every timeless moment of your love
+                        story.
+                    </p>
+                </div>
+
+                <!-- Milestones -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service3.jpg" alt="Milestones" class="service-image">
+                    </div>
+                    <h3 class="service-title">Milestones</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Marking your special achievements, graduations, and life’s singular moments with artistic
+                        portraiture.
+                    </p>
+                </div>
+
+                <!-- Family -->
+                <div class="service-card reveal">
+                    <div class="service-image-wrapper">
+                        <img src="images/service2.jpg" alt="Family" class="service-image">
+                    </div>
+                    <h3 class="service-title">Family</h3>
+                    <div class="service-border"></div>
+                    <p class="service-description">
+                        Freezing genuine smiles, warm hugs, and the unique connection that makes your family story
+                        yours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO (12 IMAGES) -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">See My Work</h2>
+            </div>
+
+            <div class="works-grid">
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image1.jpg" alt="Portrait 1" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image2.jpg" alt="Portrait 2" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image3.jpg" alt="Portrait 3" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image4.jpg" alt="Portrait 4" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image5.jpg" alt="Portrait 5" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image6.jpg" alt="Portrait 6" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image8.jpg" alt="Portrait 8" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image7.jpg" alt="Portrait 7" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image9.jpg" alt="Portrait 9" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image10.jpg" alt="Portrait 10" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image11.jpg" alt="Portrait 11" class="work-image">
+                    </div>
+                </div>
+
+                <div class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <img src="images/image12.jpg" alt="Portrait 12" class="work-image">
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;" class="reveal">
+                <a href="#" class="btn btn-primary" style="background: #111; border: 1px solid #333; color: #fff;">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow" style="color: var(--color-gray-400);">Kind Words</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+
+            <div class="review-item reveal">
+                <i class="ri-double-quotes-l review-quote-icon"></i>
+                <p class="review-text">
+                    "Ariel takes the absolute best photos! She’s captured every moment of my little family so far & the
+                    pictures
+                    always turn out better than the last ones somehow! Not only is she amazing at what she does,
+                    she’s personable, kind and funny. We always have so much fun with her! I will continue
+                    to recommend & use her again & again!"
+                </p>
+                <div class="review-author">Sami Kelsoe</div>
+                <span class="review-recommends">Recommends Artistry By Ariel Photography</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM (formerly CTA) -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content reveal">
+                <span class="cta-eyebrow">Begin Your Journey</span>
+                <h2 class="cta-title">Let's capture something truly beautiful together</h2>
+
+                <form class="booking-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date" class="form-label">Preferred Date</label>
+                        <input type="date" id="date" name="date" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Tell Me About Your Vision</label>
+                        <textarea id="message" name="message" class="form-input" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Schedule Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="footer-logo">Artistry By Ariel Photography</span>
+                <p class="footer-text">
+                    Capturing your love, your family, your quiet joys with gentle artistry. Based in St. Louis & Grover,
+                    MO. Available for travel worldwide.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Book Now</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Connect</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                    <a href="mailto:hello@artistrybyariel.com" class="social-link" aria-label="Email"><i
+                            class="ri-mail-line"></i></a>
+                </div>
+                <p style="margin-top:1.2rem; font-size:0.85rem; color:var(--color-gray-400);">
+                    hello@artistrybyariel.com
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Artistry By Ariel Photography. All rights reserved.</p>
+            <p>St. Louis • Grover • Cape Girardeau • Worldwide</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 100);
+        });
+
+        // Reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1, rootMargin: '-50px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Toggle Mobile Menu
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = navToggle.querySelector('i');
+            icon.classList.toggle('ri-menu-line');
+            icon.classList.toggle('ri-close-line');
+        });
+
+        // Close menu on link click (for mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = navToggle.querySelector('i');
+                icon.classList.add('ri-menu-line');
+                icon.classList.remove('ri-close-line');
+            });
+        });
+    </script>
+</body>
+
+</html>
